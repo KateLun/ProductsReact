@@ -2,8 +2,9 @@ const Product = (props) => {
     const { product, deleteProduct, changeButton } = props
 
     return (
-        <div className="bg-indigo-200 m-10 py-4 px-6 flex justify-between rounded-md">
+        <div className="bg-indigo-200 m-10 py-4 px-6 flex flex-col sm:flex-row justify-between rounded-md">
             <div className="flex flex-col items-start justify-center">
+                <p className="text-indigo-200 border border-solid bg-indigo-500 rounded-3xl px-4 py-1 text-md font-bold">Отдел: {product.section}</p>
                 <p className="text-2xl font-bold">{product.name}</p>
                 <p className="text-indigo-800 font-semibold">{product.amount} - {product.price}</p>
             </div>
